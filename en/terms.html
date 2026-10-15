@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Use — ASCEND</title>
+<meta name="description" content="Terms of Use of the ASCEND app by Steve Camboly." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0A0A0B;
+    --bg-card: #131316;
+    --bg-warn: rgba(229,57,53,0.06);
+    --accent: #E53935;
+    --text: #FFFFFF;
+    --text-muted: rgba(255,255,255,0.62);
+    --text-faded: rgba(255,255,255,0.32);
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.18);
+    --border-warn: rgba(229,57,53,0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.7;
+    min-height: 100vh;
+    padding-bottom: 80px;
+  }
+
+  /* HEADER STICKY */
+  header.brand {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,11,0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 22px;
+  }
+  .brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .logo-block { display: flex; flex-direction: column; gap: 2px; }
+  .logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: var(--text);
+    line-height: 1;
+  }
+  .logo .dot { color: var(--accent); }
+  .logo-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+  .doc-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border: 1px solid var(--border-warn);
+    border-radius: 4px;
+  }
+
+  /* CONTAINER */
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 22px 0;
+  }
+
+  /* HERO */
+  .hero { margin-bottom: 56px; padding-bottom: 44px; border-bottom: 1px solid var(--border); }
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(38px, 8vw, 60px);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  h1 .accent { color: var(--accent); }
+  .hero-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .hero-meta strong { color: var(--text); font-weight: 700; }
+  .hero-intro {
+    margin-top: 28px;
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+
+  /* SOMMAIRE */
+  .toc {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 64px;
+  }
+  .toc-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+  }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc li {
+    counter-increment: toc;
+    margin-bottom: 10px;
+    padding-left: 38px;
+    position: relative;
+    font-size: 14.5px;
+  }
+  .toc li::before {
+    content: counter(toc, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-faded);
+    letter-spacing: 1px;
+  }
+  .toc a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .toc a:hover { color: var(--accent); }
+
+  /* SECTIONS */
+  section.clause { margin-bottom: 64px; scroll-margin-top: 90px; }
+  .clause-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(26px, 4.5vw, 34px);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  p { color: var(--text-muted); margin-bottom: 16px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul, ol { color: var(--text-muted); margin-left: 20px; margin-bottom: 16px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* INFO CARD */
+  .info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin: 20px 0;
+  }
+  .info-card .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--text-faded);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .info-card .value {
+    color: var(--text);
+    font-size: 15px;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .info-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .info-row .k {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--text-faded);
+    text-transform: uppercase;
+  }
+  .info-row .v { color: var(--text); font-size: 15px; }
+
+  /* WARNING BOX (santé) */
+  .warn-box {
+    background: var(--bg-warn);
+    border: 1px solid var(--border-warn);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 24px 0;
+  }
+  .warn-box .warn-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .warn-box p { color: var(--text); }
+  .warn-box p:last-child { margin-bottom: 0; }
+
+  /* PRICE TABLE */
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-row .tier {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .price-row .price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 80px;
+    padding: 40px 22px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer .signature {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--text);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  footer .signature .dot { color: var(--accent); }
+  footer .sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  footer .footer-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-faded);
+  }
+
+  /* SEPARATOR */
+  .sep {
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+  }
+
+  /* DESKTOP ENHANCEMENTS */
+  @media (min-width: 768px) {
+    body { font-size: 16px; }
+    main { padding: 80px 22px 0; }
+    .info-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .info-row { padding-bottom: 0; border-bottom: none; }
+    h1 { letter-spacing: 1.5px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="brand">
+  <div class="brand-row">
+    <div class="logo-block">
+      <div class="logo">ASCEND<span class="dot">.</span></div>
+      <div class="logo-sub">BY STEVE CAMBOLY</div>
+    </div>
+    <div class="doc-tag">TERMS</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-label">LEGAL DOCUMENT · V1.0 (ENGLISH)</div>
+    <h1>Terms <span class="accent">of</span> Use</h1>
+    <div class="hero-meta">IN FORCE SINCE <strong>MAY 19, 2026</strong></div>
+    <div class="hero-meta">ENGLISH VERSION PUBLISHED ON <strong>OCTOBER 15, 2026</strong></div>
+    <p class="hero-intro">
+      This document sets out the terms under which you use the ASCEND mobile application ("the Application"), published by Steve Camboly. By creating an account or accessing the Application, you accept these terms without reservation. Please read them carefully — they govern your rights, your obligations, your subscription and each party's liability.
+    </p>
+    <p class="hero-intro">
+      These Terms were originally written in French. This English version is provided for your convenience; in the event of any discrepancy, the <a href="../cgu.html">French version</a> prevails.
+    </p>
+  </div>
+
+  <!-- CONTENTS -->
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#sec1">Legal notice</a></li>
+      <li><a href="#sec2">Purpose of the Application</a></li>
+      <li><a href="#sec3">Acceptance of the Terms</a></li>
+      <li><a href="#sec4">Access conditions and minimum age</a></li>
+      <li><a href="#sec5">User account</a></li>
+      <li><a href="#sec6">Subscription and payment</a></li>
+      <li><a href="#sec7">Free trial and renewal</a></li>
+      <li><a href="#sec8">Right of withdrawal</a></li>
+      <li><a href="#sec9">Cancellation</a></li>
+      <li><a href="#sec10">Health and safety warning</a></li>
+      <li><a href="#sec11">Intellectual property</a></li>
+      <li><a href="#sec12">Personal data</a></li>
+      <li><a href="#sec13">User conduct</a></li>
+      <li><a href="#sec14">Service availability</a></li>
+      <li><a href="#sec15">Liability</a></li>
+      <li><a href="#sec16">Mediation and dispute resolution</a></li>
+      <li><a href="#sec17">Governing law and jurisdiction</a></li>
+      <li><a href="#sec18">Changes to the Terms</a></li>
+      <li><a href="#sec19">Contact</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. LEGAL NOTICE -->
+  <section class="clause" id="sec1">
+    <div class="clause-num">Article 01</div>
+    <h2>Legal notice</h2>
+    <p>In accordance with Article 6 of French Law No. 2004-575 of June 21, 2004 on confidence in the digital economy (LCEN), the following information is provided to users of the Application.</p>
+
+    <h3>Publisher of the Application</h3>
+    <div class="info-card">
+      <div class="info-grid">
+        <div class="info-row">
+          <div class="k">Name</div>
+          <div class="v">Steve Camboly</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Status</div>
+          <div class="v">Sole trader (French micro-entreprise)</div>
+        </div>
+        <div class="info-row">
+          <div class="k">SIRET</div>
+          <div class="v">93861227200014</div>
+        </div>
+        <div class="info-row">
+          <div class="k">VAT</div>
+          <div class="v">Not applicable, Article 293 B of the French General Tax Code</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Address</div>
+          <div class="v">272 route de la Petite Joux<br/>74520 Valleiry, France</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Contact</div>
+          <div class="v"><a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Publication director</h3>
+    <p>Steve Camboly, as publisher of the Application.</p>
+
+    <h3>Hosting provider</h3>
+    <div class="info-card">
+      <div class="info-grid">
+        <div class="info-row">
+          <div class="k">Company</div>
+          <div class="v">Supabase Inc.</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Address</div>
+          <div class="v">970 Toa Payoh North #07-04<br/>Singapore 318992</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Data center</div>
+          <div class="v">eu-west-3 — Paris, France</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Website</div>
+          <div class="v"><a href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Distribution</h3>
+    <p>The Application is distributed through the App Store (Apple Inc.) and the Google Play Store (Google LLC), subject to their own terms, which you also accept when downloading it.</p>
+  </section>
+
+  <!-- 2. PURPOSE -->
+  <section class="clause" id="sec2">
+    <div class="clause-num">Article 02</div>
+    <h2>Purpose of the Application</h2>
+    <p>ASCEND is a premium fitness coaching mobile application offering:</p>
+    <ul>
+      <li>Personalised training programs calibrated to your profile, your level and your actual availability</li>
+      <li>A calculation of your calorie and macronutrient intake based on the Mifflin-St Jeor method, according to your goal</li>
+      <li>Tracking of your body measurements, your weight and your progress photos</li>
+      <li>Editorial content and support messages from the ASCEND coach</li>
+      <li>Depending on your subscription plan, access to additional programs, messaging with an ASCEND coach and premium features</li>
+    </ul>
+    <p>The Application is not a medical device and in no way replaces the advice of a healthcare professional. See Article 10 below.</p>
+  </section>
+
+  <!-- 3. ACCEPTANCE -->
+  <section class="clause" id="sec3">
+    <div class="clause-num">Article 03</div>
+    <h2>Acceptance of the Terms</h2>
+    <p>Using the Application implies full and unreserved acceptance of these Terms of Use. This acceptance is given when you create your user account.</p>
+    <p>If you do not accept all or part of these Terms, you must stop using the Application and uninstall it.</p>
+    <p>These Terms can be consulted at any time from the Application settings and are hosted on a durable medium.</p>
+  </section>
+
+  <!-- 4. AGE -->
+  <section class="clause" id="sec4">
+    <div class="clause-num">Article 04</div>
+    <h2>Access conditions and minimum age</h2>
+    <p>Use of the Application is strictly reserved for people <strong>aged 16 or over</strong>. By creating an account, you declare that you are at least 16 years old.</p>
+    <p>The Application is not intended for anyone under 16, and the publisher does not knowingly collect personal data from them. Any account identified as belonging to a person under 16 will be suspended immediately and the associated data deleted.</p>
+    <p>Use by a minor aged 16 to 18 requires the prior consent of a parent or legal guardian.</p>
+  </section>
+
+  <!-- 5. ACCOUNT -->
+  <section class="clause" id="sec5">
+    <div class="clause-num">Article 05</div>
+    <h2>User account</h2>
+    <h3>Creating your account</h3>
+    <p>Access to the Application requires an account. When signing up, you agree to provide accurate, up-to-date and complete information. Clearly false information may lead to the suspension of the account.</p>
+
+    <h3>Credentials and security</h3>
+    <p>You alone are responsible for keeping your credentials confidential (password, Apple or Google sign-in, etc.) and for any activity carried out from your account. If you suspect unauthorised access, you must change your password immediately and inform the publisher at <a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a>.</p>
+
+    <h3>Deleting your account</h3>
+    <p>You can request the deletion of your account at any time from the Application settings, from the public page <a href="./delete-account.html">Delete your ASCEND account</a> or by email at <a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a>. Deletion permanently erases your personal data, subject to legal retention obligations (in particular accounting and tax obligations).</p>
+
+    <h3>Suspension</h3>
+    <p>The publisher reserves the right to suspend or close an account in the event of a clear breach of these Terms, without prejudice to any other remedy.</p>
+  </section>
+
+  <!-- 6. SUBSCRIPTION -->
+  <section class="clause" id="sec6">
+    <div class="clause-num">Article 06</div>
+    <h2>Subscription and payment</h2>
+    <p>Full access to the Application's features requires a paid subscription. Several plans are available; their features, content and current prices can be found:</p>
+    <ul>
+      <li>On the subscription screen inside the Application, shown before any purchase</li>
+      <li>On the ASCEND product page of the App Store (Apple) or the Google Play Store (Google)</li>
+    </ul>
+    <p>Prices are shown in your local currency by Apple or Google, including any taxes applicable in your country. The publisher does not charge VAT, in accordance with Article 293 B of the French General Tax Code (VAT exemption scheme for micro-entrepreneurs).</p>
+    <p>Before subscribing, you are shown the applicable price, the commitment period (monthly or yearly) and the renewal terms, and you expressly confirm your order.</p>
+
+    <h3>Payment methods</h3>
+    <p>Payments are processed exclusively by the distribution platforms:</p>
+    <ul>
+      <li><strong>On iOS</strong>: through Apple In-App Purchase, managed by Apple Inc. under the App Store terms</li>
+      <li><strong>On Android</strong>: through Google Play Billing, managed by Google LLC under the Google Play Store terms</li>
+    </ul>
+    <p>The publisher does not collect, store or process any of your bank or card details. Payment, refund and billing dispute terms are governed by Apple's or Google's terms, depending on your platform.</p>
+
+    <h3>Price changes</h3>
+    <p>The publisher reserves the right to change subscription prices. Any change will be notified at least <strong>30 days</strong> in advance by email or by notification in the Application. You will be able to cancel your subscription before the new price takes effect.</p>
+  </section>
+
+  <!-- 7. TRIAL -->
+  <section class="clause" id="sec7">
+    <div class="clause-num">Article 07</div>
+    <h2>Free trial and renewal</h2>
+    <h3>Free trial</h3>
+    <p>A free trial of <strong>7 days</strong> may be offered on your first subscription to the ASCEND plan. This trial is offered at the publisher's discretion and may be changed or withdrawn at any time for new users.</p>
+    <p>At the end of the trial, unless you cancel before it ends, the subscription automatically becomes a paid subscription billed at the current price.</p>
+
+    <h3>Automatic renewal</h3>
+    <p>The subscription is concluded for an indefinite period and renews automatically at the end of each period (monthly or yearly, as chosen) until it is cancelled under the conditions set out in Article 9.</p>
+  </section>
+
+  <!-- 8. WITHDRAWAL -->
+  <section class="clause" id="sec8">
+    <div class="clause-num">Article 08</div>
+    <h2>Right of withdrawal</h2>
+    <p>In accordance with Article L. 221-28 13° of the French Consumer Code, the 14-day right of withdrawal <strong>does not apply</strong> to contracts for the supply of digital content not delivered on a physical medium, whose performance has begun with the consumer's express prior consent and express waiver of the right of withdrawal.</p>
+    <p>By subscribing and immediately accessing the Application's features, you:</p>
+    <ul>
+      <li>Expressly request immediate access to the Application's content and services</li>
+      <li>Acknowledge that you lose your 14-day right of withdrawal as soon as access to the content begins</li>
+    </ul>
+    <p>Regardless of the right of withdrawal, you may cancel your subscription at any time under the conditions set out in Article 9.</p>
+  </section>
+
+  <!-- 9. CANCELLATION -->
+  <section class="clause" id="sec9">
+    <div class="clause-num">Article 09</div>
+    <h2>Cancellation</h2>
+    <h3>By you</h3>
+    <p>You can cancel your subscription at any time, free of charge and without giving a reason, directly from your account on the platform you subscribed through:</p>
+    <ul>
+      <li><strong>On iOS</strong>: iPhone Settings → your Apple Account → Subscriptions → ASCEND → Cancel Subscription</li>
+      <li><strong>On Android</strong>: Google Play Store → profile → Payments &amp; subscriptions → Subscriptions → ASCEND → Cancel subscription</li>
+    </ul>
+    <p>Cancellation takes effect at the end of the current subscription period. No refund is due for a period that has started, except as provided by Apple's or Google's terms.</p>
+
+    <h3>By the publisher</h3>
+    <p>The publisher may terminate your subscription and close your account, after a formal notice that has gone unanswered, in the event of:</p>
+    <ul>
+      <li>A serious or repeated breach of these Terms</li>
+      <li>Fraudulent or clearly unlawful behaviour</li>
+      <li>Any attempt to undermine the security, integrity or operation of the Application</li>
+    </ul>
+  </section>
+
+  <!-- 10. HEALTH -->
+  <section class="clause" id="sec10">
+    <div class="clause-num">Article 10</div>
+    <h2>Health and safety warning</h2>
+
+    <div class="warn-box">
+      <div class="warn-label">Important medical warning</div>
+      <p>ASCEND is a wellness and fitness coaching application. <strong>It is not a medical device</strong> and cannot replace medical advice, diagnosis or treatment from a qualified healthcare professional.</p>
+      <p><strong>Before starting any training program or changing your nutritional intake, you should consult your doctor</strong>, in particular if any of the following applies to you:</p>
+    </div>
+
+    <ul>
+      <li>Cardiovascular, pulmonary or metabolic condition (diabetes, high blood pressure, etc.)</li>
+      <li>History of bone, joint or muscle injuries</li>
+      <li>Current pregnancy or breastfeeding</li>
+      <li>Ongoing medical follow-up or treatment</li>
+      <li>Diagnosed or suspected eating disorder</li>
+      <li>Returning to exercise after a long period of inactivity</li>
+      <li>Any doubt about your fitness to take part in physical activity</li>
+    </ul>
+
+    <h3>Training at your own risk</h3>
+    <p>You use the training programs and nutritional recommendations offered by the Application <strong>at your own and sole risk</strong>. You acknowledge that you are aware of the risks inherent in any physical activity (injury, feeling unwell, etc.) and you agree to:</p>
+    <ul>
+      <li>Respect your physical limits and stop immediately any exercise that causes pain, dizziness, chest tightness or unusual discomfort</li>
+      <li>Train in a safe environment, with suitable equipment and adequate hydration</li>
+      <li>Adapt or stop your training in case of fatigue, illness or injury</li>
+      <li>Consult a healthcare professional if in doubt or if you notice any unusual symptom</li>
+    </ul>
+
+    <h3>No guaranteed results</h3>
+    <p>The publisher does not guarantee any physical, aesthetic, athletic or health result. Results depend on many individual factors (genetics, lifestyle, consistency, metabolism, environment) beyond the publisher's control.</p>
+
+    <h3>Limitation of liability</h3>
+    <p>The publisher cannot be held liable for injuries, physical disorders, bodily harm, after-effects or consequences resulting from the exercises or the nutritional recommendations offered by the Application, where the user has not followed these warnings or has failed to consult a healthcare professional despite a contraindication.</p>
+  </section>
+
+  <!-- 11. IP -->
+  <section class="clause" id="sec11">
+    <div class="clause-num">Article 11</div>
+    <h2>Intellectual property</h2>
+    <p>All elements of the Application — including the "ASCEND" brand, trade name, logo, visual identity, texts, training programs, editorial content, videos, illustrations, calculation algorithms, databases, source code and software architecture — are the exclusive property of Steve Camboly or are licensed to him.</p>
+    <p>These elements are protected by French and international intellectual property laws, in particular the French Intellectual Property Code.</p>
+    <p>Food composition data from public sources (USDA FoodData Central, UK CoFID, Food Standards Australia New Zealand AFCD, ANSES CIQUAL, Open Food Facts) remain subject to their own licences.</p>
+    <p>The publisher grants you a personal, non-exclusive, non-transferable and revocable right to use the Application, strictly limited to personal and private, non-commercial use, for the duration of your subscription.</p>
+    <p>Without the publisher's prior written permission, the following are prohibited in particular:</p>
+    <ul>
+      <li>Reproducing, modifying, translating, distributing or adapting all or part of the content</li>
+      <li>Extracting, reusing or commercially exploiting the databases</li>
+      <li>Reselling, sublicensing or sharing access to the Application</li>
+      <li>Using the content to train, feed or evaluate an artificial intelligence model</li>
+      <li>Reverse engineering, decompiling or attempting to access the source code</li>
+    </ul>
+
+    <h3>User content (progress photos, measurements, etc.)</h3>
+    <p>You remain the owner of the content you publish or save in the Application (progress photos, measurements, etc.). You grant the publisher, free of charge, a licence strictly limited to using this content for the sole purpose of operating the service (storage, display in your interface, progress calculations). This content remains private and is never published or shared without your explicit consent.</p>
+  </section>
+
+  <!-- 12. PERSONAL DATA -->
+  <section class="clause" id="sec12">
+    <div class="clause-num">Article 12</div>
+    <h2>Personal data</h2>
+    <p>The processing of your personal data is governed by our Privacy Policy, available from the Application and at the following address: <a href="./privacy.html">Privacy Policy</a>.</p>
+    <p>The data controller is Steve Camboly, whose contact details are given in Article 1 of these Terms.</p>
+    <p>In accordance with Regulation (EU) 2016/679 (GDPR) and amended French Law No. 78-17 of January 6, 1978 ("Informatique et Libertés"), you have the following rights at any time:</p>
+    <ul>
+      <li>Right of access to your data (Article 15 GDPR)</li>
+      <li>Right to rectification (Article 16 GDPR)</li>
+      <li>Right to erasure (Article 17 GDPR)</li>
+      <li>Right to restriction of processing (Article 18 GDPR)</li>
+      <li>Right to data portability (Article 20 GDPR)</li>
+      <li>Right to object (Article 21 GDPR)</li>
+      <li>Right to set instructions regarding what happens to your data after your death</li>
+    </ul>
+    <p>To exercise these rights, write to <a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a>. You also have the right to lodge a complaint with the French data protection authority, the Commission Nationale de l'Informatique et des Libertés (CNIL) — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, France — or via <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>, or with the data protection authority of your country.</p>
+  </section>
+
+  <!-- 13. CONDUCT -->
+  <section class="clause" id="sec13">
+    <div class="clause-num">Article 13</div>
+    <h2>User conduct</h2>
+    <p>By using the Application, you agree to:</p>
+    <ul>
+      <li>Comply with these Terms and all applicable laws and regulations</li>
+      <li>Not infringe the rights of the publisher, other users or third parties</li>
+      <li>Not attempt to circumvent technical protection measures or access restrictions</li>
+      <li>Not use the Application on a "jailbroken", "rooted" or otherwise modified device in a way that compromises its security</li>
+      <li>Not extract, copy or scrape all or part of the content, automatically or manually, beyond the intended personal use</li>
+      <li>Not attempt to access accounts or data that do not belong to you</li>
+      <li>Not impersonate anyone else</li>
+      <li>Not introduce viruses, malicious code or anything likely to harm the operation of the Application</li>
+    </ul>
+  </section>
+
+  <!-- 14. AVAILABILITY -->
+  <section class="clause" id="sec14">
+    <div class="clause-num">Article 14</div>
+    <h2>Service availability</h2>
+    <p>The publisher uses reasonable means to keep the Application available 24/7. However, access to the Application may be interrupted, in particular for:</p>
+    <ul>
+      <li>Technical maintenance or updates</li>
+      <li>Technical incidents attributable to the hosting provider, the distribution platforms (Apple, Google) or your internet provider</li>
+      <li>Force majeure</li>
+    </ul>
+    <p>The publisher cannot be held liable for the consequences of a temporary unavailability of the Application. In the event of prolonged unavailability not attributable to the user, a pro rata compensation may be considered upon the user's written request.</p>
+    <p>The Application evolves continuously. The publisher reserves the right to modify, suspend or remove any feature at any time, while respecting subscribers' acquired rights.</p>
+  </section>
+
+  <!-- 15. LIABILITY -->
+  <section class="clause" id="sec15">
+    <div class="clause-num">Article 15</div>
+    <h2>Liability</h2>
+    <p>The publisher undertakes to apply reasonable care and diligence to the Application. However, the Application is provided "as is", without any warranty of fitness for a particular purpose.</p>
+    <p>The publisher cannot be held liable in any way for:</p>
+    <ul>
+      <li>Indirect damage (loss of opportunity, loss of profit, loss of data not caused by the publisher's fault, damage to reputation)</li>
+      <li>The consequences of use that does not comply with these Terms or with the health warnings</li>
+      <li>Malfunctions caused by your device, your operating system or your internet connection</li>
+      <li>Acts of third parties, including hosting providers and distribution platforms</li>
+    </ul>
+    <p>In any event, and without prejudice to mandatory provisions of French law or of the law of your country of residence, the publisher's total liability to a user is limited to the total amount actually paid by that user for their subscription during the <strong>12 months preceding</strong> the event giving rise to the claim.</p>
+    <p>These limitations do not apply in the event of gross negligence, wilful misconduct, bodily injury or breach of an essential obligation of the contract.</p>
+  </section>
+
+  <!-- 16. MEDIATION -->
+  <section class="clause" id="sec16">
+    <div class="clause-num">Article 16</div>
+    <h2>Mediation and dispute resolution</h2>
+    <p>In the event of a dispute relating to these Terms, you are invited to first contact support at <a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a> so that an amicable solution can be found.</p>
+    <p>In accordance with Articles L. 611-1 et seq. of the French Consumer Code, you may use a consumer mediator free of charge. <em>The competent consumer mediator will be designated and published in these Terms before December 31, 2026. In the meantime, you can use the European online dispute resolution platform at</em> <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.</p>
+    <p>Mediation is optional. The mediator independently and impartially tries to bring the parties together to reach an amicable solution. The parties remain free to accept or refuse mediation and the proposed solution.</p>
+  </section>
+
+  <!-- 17. LAW -->
+  <section class="clause" id="sec17">
+    <div class="clause-num">Article 17</div>
+    <h2>Governing law and jurisdiction</h2>
+    <p>These Terms are governed by French law, without prejudice to the mandatory consumer protection rules of your country of residence.</p>
+    <p>In the event of a dispute, and after an attempt at amicable resolution has failed, the dispute will be brought before the competent French courts, in accordance with the rules of territorial jurisdiction of the French Code of Civil Procedure.</p>
+    <p>In accordance with Article R. 631-3 of the French Consumer Code, when you act as a consumer you may bring proceedings, at your choice, before one of the courts with territorial jurisdiction under the French Code of Civil Procedure or before the court of the place where you lived when the contract was concluded or when the harmful event occurred.</p>
+  </section>
+
+  <!-- 18. CHANGES -->
+  <section class="clause" id="sec18">
+    <div class="clause-num">Article 18</div>
+    <h2>Changes to the Terms</h2>
+    <p>The publisher reserves the right to amend these Terms at any time, in particular to adapt them to legislative, regulatory, case-law, technical or commercial developments.</p>
+    <p>Any substantial change will be notified to you in advance by email or by notification in the Application, at least <strong>15 days</strong> before it takes effect. Continuing to use the Application after the new Terms take effect constitutes acceptance of them.</p>
+    <p>If you disagree with the new Terms, you have the right to cancel your subscription under the conditions set out in Article 9.</p>
+    <p>The version of the Terms in force is the one available at any time from the Application, and it bears an update date.</p>
+  </section>
+
+  <!-- 19. CONTACT -->
+  <section class="clause" id="sec19">
+    <div class="clause-num">Article 19</div>
+    <h2>Contact</h2>
+    <p>For any question about these Terms, how the Application works, managing your account or exercising your rights:</p>
+    <div class="info-card">
+      <div class="info-grid">
+        <div class="info-row">
+          <div class="k">Email</div>
+          <div class="v"><a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="k">Mail</div>
+          <div class="v">Steve Camboly<br/>272 route de la Petite Joux<br/>74520 Valleiry, France</div>
+        </div>
+      </div>
+    </div>
+    <p>The publisher undertakes to reply within a reasonable time, and in any case within the one-month period set by the GDPR for requests relating to personal data.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="signature">ASCEND<span class="dot">.</span></div>
+  <div class="sub">BY STEVE CAMBOLY</div>
+  <div class="footer-meta">TERMS v1.0 (ENGLISH) · ALL RIGHTS RESERVED</div>
+</footer>
+
+</body>
+</html>

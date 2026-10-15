@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — ASCEND</title>
+<meta name="description" content="Privacy Policy of the ASCEND app by Steve Camboly." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0A0A0B;
+    --bg-card: #131316;
+    --bg-warn: rgba(229,57,53,0.06);
+    --bg-info: rgba(22,163,74,0.06);
+    --accent: #E53935;
+    --success: #16A34A;
+    --text: #FFFFFF;
+    --text-muted: rgba(255,255,255,0.62);
+    --text-faded: rgba(255,255,255,0.32);
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.18);
+    --border-warn: rgba(229,57,53,0.35);
+    --border-info: rgba(22,163,74,0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.7;
+    min-height: 100vh;
+    padding-bottom: 80px;
+  }
+
+  header.brand {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,11,0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 22px;
+  }
+  .brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .logo-block { display: flex; flex-direction: column; gap: 2px; }
+  .logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: var(--text);
+    line-height: 1;
+  }
+  .logo .dot { color: var(--accent); }
+  .logo-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+  .doc-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border: 1px solid var(--border-warn);
+    border-radius: 4px;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 22px 0;
+  }
+
+  .hero { margin-bottom: 56px; padding-bottom: 44px; border-bottom: 1px solid var(--border); }
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(38px, 8vw, 60px);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  h1 .accent { color: var(--accent); }
+  .hero-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .hero-meta strong { color: var(--text); font-weight: 700; }
+  .hero-intro {
+    margin-top: 28px;
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+
+  .toc {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 64px;
+  }
+  .toc-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+  }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc li {
+    counter-increment: toc;
+    margin-bottom: 10px;
+    padding-left: 38px;
+    position: relative;
+    font-size: 14.5px;
+  }
+  .toc li::before {
+    content: counter(toc, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-faded);
+    letter-spacing: 1px;
+  }
+  .toc a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .toc a:hover { color: var(--accent); }
+
+  section.clause { margin-bottom: 64px; scroll-margin-top: 90px; }
+  .clause-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(26px, 4.5vw, 34px);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  p { color: var(--text-muted); margin-bottom: 16px; }
+  p strong { color: var(--text); font-weight: 600; }
+  ul, ol { color: var(--text-muted); margin-left: 20px; margin-bottom: 16px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin: 20px 0;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .info-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .info-row .k {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--text-faded);
+    text-transform: uppercase;
+  }
+  .info-row .v { color: var(--text); font-size: 15px; }
+
+  .warn-box {
+    background: var(--bg-warn);
+    border: 1px solid var(--border-warn);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 24px 0;
+  }
+  .warn-box .warn-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .warn-box p { color: var(--text); }
+  .warn-box p:last-child { margin-bottom: 0; }
+
+  .info-box {
+    background: var(--bg-info);
+    border: 1px solid var(--border-info);
+    border-left: 3px solid var(--success);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 24px 0;
+  }
+  .info-box .info-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--success);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .info-box p { color: var(--text); }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  /* TABLEAU DONNÉES */
+  .data-table {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+  .data-row {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+  }
+  .data-row:last-child { border-bottom: none; }
+  .data-row .data-label {
+    font-family: 'Anton', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .data-row .data-content {
+    color: var(--text-muted);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .data-row .data-content strong { color: var(--text); }
+
+  footer {
+    margin-top: 80px;
+    padding: 40px 22px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer .signature {
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--text);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  footer .signature .dot { color: var(--accent); }
+  footer .sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  footer .footer-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-faded);
+  }
+  footer .footer-links {
+    margin-top: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  footer .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  footer .footer-links a:hover { color: var(--accent); }
+
+  @media (min-width: 768px) {
+    body { font-size: 16px; }
+    main { padding: 80px 22px 0; }
+    .info-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .info-row { padding-bottom: 0; border-bottom: none; }
+    h1 { letter-spacing: 1.5px; }
+  }
+</style>
+</head>
+<body>
+<header class="brand">
+<div class="brand-row">
+<div class="logo-block">
+<div class="logo">ASCEND<span class="dot">.</span></div>
+<div class="logo-sub">BY STEVE CAMBOLY</div>
+</div>
+<div class="doc-tag">PRIVACY</div>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<div class="hero">
+<div class="hero-label">LEGAL DOCUMENT · V1.1 (ENGLISH)</div>
+<h1>Privacy <span class="accent">Policy</span></h1>
+<div class="hero-meta">IN FORCE SINCE <strong>MAY 19, 2026</strong></div>
+<div class="hero-meta">ENGLISH VERSION PUBLISHED ON <strong>OCTOBER 15, 2026</strong></div>
+<p class="hero-intro">
+This policy explains clearly what personal data is collected when you use ASCEND, why, how long it is kept, who it is shared with and how to exercise your rights. It is written in application of Regulation (EU) 2016/679 (GDPR) and amended French Law No. 78-17 of January 6, 1978 ("Informatique et Libertés").
+</p>
+<p class="hero-intro">
+This policy was originally written in French. This English version is provided for your convenience; in the event of any discrepancy, the <a href="../privacy.html">French version</a> prevails.
+</p>
+<div class="info-box">
+<div class="info-label">In one sentence</div>
+<p>ASCEND only collects the data strictly needed for your personalised coaching, stores it in France with Supabase, never sells it, never uses it for advertising, and lets you delete it at any time.</p>
+</div>
+</div>
+<!-- CONTENTS -->
+<div class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#sec1">Data controller</a></li>
+<li><a href="#sec2">Data collected</a></li>
+<li><a href="#sec3">Purposes and legal bases</a></li>
+<li><a href="#sec4">Recipients and processors</a></li>
+<li><a href="#sec5">Transfers outside the European Union</a></li>
+<li><a href="#sec6">Retention period</a></li>
+<li><a href="#sec7">Data security</a></li>
+<li><a href="#sec8">Cookies and trackers</a></li>
+<li><a href="#sec9">Minors</a></li>
+<li><a href="#sec10">Profiling and automated decisions</a></li>
+<li><a href="#sec11">Your rights</a></li>
+<li><a href="#sec12">Changes to this policy</a></li>
+<li><a href="#sec13">Contact and complaints</a></li>
+</ol>
+</div>
+<!-- 1. CONTROLLER -->
+<section class="clause" id="sec1">
+<div class="clause-num">Article 01</div>
+<h2>Data controller</h2>
+<p>The controller of your personal data, within the meaning of Article 4(7) GDPR, is:</p>
+<div class="info-card">
+<div class="info-grid">
+<div class="info-row">
+<div class="k">Name</div>
+<div class="v">Steve Camboly</div>
+</div>
+<div class="info-row">
+<div class="k">Status</div>
+<div class="v">Sole trader (French micro-entreprise)</div>
+</div>
+<div class="info-row">
+<div class="k">SIRET</div>
+<div class="v">93861227200014</div>
+</div>
+<div class="info-row">
+<div class="k">Address</div>
+<div class="v">272 route de la Petite Joux<br/>74520 Valleiry, France</div>
+</div>
+<div class="info-row">
+<div class="k">GDPR contact</div>
+<div class="v"><a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a></div>
+</div>
+</div>
+</div>
+<h3>Data Protection Officer (DPO)</h3>
+<p>As appointing a DPO is not mandatory given the size of the organisation and the nature of the processing, ASCEND has not appointed one. Any question about your personal data can be sent directly to the contact address above.</p>
+</section>
+<!-- 2. DATA COLLECTED -->
+<section class="clause" id="sec2">
+<div class="clause-num">Article 02</div>
+<h2>Data collected</h2>
+<p>ASCEND only collects the personal data you provide voluntarily when using the Application, and the data strictly necessary for its technical operation.</p>
+<div class="data-table">
+<div class="data-row">
+<div class="data-label">Identity</div>
+<div class="data-content">
+Email address, first name, account creation date. <strong>Source</strong>: you (sign-up form, when creating your account).
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Physical profile</div>
+<div class="data-content">
+Sex, age, height, current weight. <strong>Source</strong>: you (onboarding questions). <strong>Purpose</strong>: personalised calculation of your basal metabolic rate and calorie needs (Mifflin-St Jeor method).
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Activity and goals</div>
+<div class="data-content">
+Declared training level, main goal (fat loss, recomposition, muscle gain, maintenance), weekly availability, estimated daily steps. <strong>Source</strong>: you.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Body measurements and tracking</div>
+<div class="data-content">
+Body measurements you choose to record (weight over time, waist, arm, thigh, chest, hips, calf). <strong>Source</strong>: you (manual entry).
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Progress photos</div>
+<div class="data-content">
+Photos you freely choose to save to follow the evolution of your physique. <strong>Source</strong>: you. These photos remain strictly private, accessible only from your account, and are never published, shared or analysed without your explicit action.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Nutrition data</div>
+<div class="data-content">
+Meals you log (foods, quantities, estimated calories, macronutrients). <strong>Source</strong>: you.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Content sent to artificial intelligence features</div>
+<div class="data-content">
+Text descriptions of meals, meal photos sent for analysis, the summary of a finished workout sent for its debrief, and the useful context you have saved in ASCEND. This data is only sent when you voluntarily use the feature concerned. The generated answers may be saved in your history in order to provide and follow up the service.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Product searches</div>
+<div class="data-content">
+When you search for a packaged product or scan a barcode, the search terms or the barcode are sent to Open Food Facts, a public food product database, to retrieve the product's nutrition facts. No account information is sent with these requests.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Usage data</div>
+<div class="data-content">
+Active program, completed workouts, time of use, streaks, progression level reached in the Application. <strong>Source</strong>: generated automatically as you use the Application.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Minimal technical data</div>
+<div class="data-content">
+Unique account identifier (UUID), sign-in timestamp, operating system type (iOS or Android). <strong>Source</strong>: generated automatically by the servers when you sign in. <strong>No geolocation data</strong>, no advertising identifier, no IP address kept long term.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Payment data</div>
+<div class="data-content">
+<strong>No bank or card details are collected or stored by ASCEND.</strong> Payments are handled entirely by Apple (App Store) or Google (Google Play), depending on your platform. On behalf of ASCEND, RevenueCat processes a user identifier, the platform, the products purchased and the subscription status (active, expired or cancelled), without receiving your card details.
+</div>
+</div>
+</div>
+<div class="info-box">
+<div class="info-label">Data we do not collect</div>
+<p>ASCEND collects <strong>no</strong> geolocation, contacts, microphone, calendar, photo library (other than the photos you explicitly add), browsing history or advertising identifier (IDFA / GAID) data, and no raw biometric data from third-party health sources (Apple Health, Health Connect, Google Fit) without your manual and explicit activation.</p>
+</div>
+</section>
+<!-- 3. PURPOSES -->
+<section class="clause" id="sec3">
+<div class="clause-num">Article 03</div>
+<h2>Purposes and legal bases</h2>
+<p>In accordance with Article 6 GDPR, each processing operation relies on an identified legal basis.</p>
+<h3>Performance of the contract (Art. 6(1)(b) GDPR)</h3>
+<p>Most data is processed to perform the terms of use and the subscription you have entered into:</p>
+<ul>
+<li>Creating and managing your user account</li>
+<li>Calculating your calorie needs and your personalised training programs</li>
+<li>Recording your progress (workouts, measurements, photos)</li>
+<li>Syncing your data across your devices</li>
+<li>Sending you functional notifications related to your program</li>
+</ul>
+<h3>Legitimate interest (Art. 6(1)(f) GDPR)</h3>
+<p>A few limited processing operations rely on the controller's legitimate interest:</p>
+<ul>
+<li>Keeping the Application secure and preventing fraud or abuse</li>
+<li>Improving the quality of the service using aggregated and anonymised usage data</li>
+<li>Answering your support requests</li>
+</ul>
+<p>You can object to this processing at any time (see Article 11).</p>
+<h3>Legal obligation (Art. 6(1)(c) GDPR)</h3>
+<p>Some data may be kept to meet legal obligations, in particular accounting and tax obligations (10 years for accounting records relating to subscriptions).</p>
+<h3>Consent (Art. 6(1)(a) GDPR)</h3>
+<p>Any optional feature going beyond what is strictly necessary (for example, behavioural reminder notifications, syncing with Apple Health or Health Connect, editorial email communications) is only activated with your explicit consent, which you can withdraw at any time from the Application settings.</p>
+</section>
+<!-- 4. PROCESSORS -->
+<section class="clause" id="sec4">
+<div class="clause-num">Article 04</div>
+<h2>Recipients and processors</h2>
+<p>Your data is never sold, rented or transferred to third parties for commercial or advertising purposes.</p>
+<p>It may be shared with the technical processors strictly necessary for the operation of the service, under a data processing agreement compliant with Article 28 GDPR:</p>
+<div class="data-table">
+<div class="data-row">
+<div class="data-label">Supabase Inc.</div>
+<div class="data-content">
+Hosting of the database and file storage (including progress photos).<br/>
+<strong>Data location</strong>: European Union (<em>eu-west-3</em> data center, Paris, France).<br/>
+<strong>Head office</strong>: 970 Toa Payoh North #07-04, Singapore 318992.<br/>
+<strong>Compliance</strong>: Supabase is SOC 2 Type II certified and applies the GDPR for its European customers.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Apple Inc.</div>
+<div class="data-content">
+Distribution of the Application through the App Store, "Sign in with Apple" authentication, In-App Purchase payments, push notifications on iOS.<br/>
+<strong>Head office</strong>: One Apple Park Way, Cupertino, CA 95014, United States.<br/>
+<strong>Transfer framework</strong>: Apple participates in the EU-U.S. <em>Data Privacy Framework</em>.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Google LLC</div>
+<div class="data-content">
+Distribution of the Application through the Google Play Store, "Sign in with Google" authentication, In-App Purchase payments, push notifications on Android.<br/>
+<strong>Head office</strong>: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States.<br/>
+<strong>Transfer framework</strong>: Google participates in the EU-U.S. <em>Data Privacy Framework</em>.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">RevenueCat Inc.</div>
+<div class="data-content">
+Technical management of access rights linked to Apple and Google subscriptions: ASCEND user identifier, platform, products, transactions and subscription status. RevenueCat acts as a processor for ASCEND and receives no card details.<br/>
+<strong>Documentation</strong>: <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">privacy policy</a> and <a href="https://www.revenuecat.com/dpa" target="_blank" rel="noopener">data processing agreement</a>.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Anthropic</div>
+<div class="data-content">
+Provision of the artificial intelligence features (meal analysis from a photo or a description, end-of-workout debrief, monthly letter). Depending on the feature used, Anthropic may process the description or photo of a meal sent by the user, the summary of a workout, and the context strictly needed for the answer. Anthropic acts as a processor under its commercial services and does not use customer content from these services to train its models.<br/>
+<strong>Documentation</strong>: <a href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">commercial terms</a> and <a href="https://www.anthropic.com/legal/data-processing-addendum" target="_blank" rel="noopener">data processing addendum</a>.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Open Food Facts</div>
+<div class="data-content">
+Public, collaborative food product database queried when you search for a packaged product or scan a barcode. It receives the search terms or the barcode, without any account information.<br/>
+<strong>Documentation</strong>: <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">privacy policy</a>.
+</div>
+</div>
+</div>
+<p>This list may change if new technical processors become necessary (for example: an anonymised audience analytics provider, a web payment provider outside the app stores, a transactional email provider). Any change will be reflected in an updated version of this policy.</p>
+</section>
+<!-- 5. TRANSFERS -->
+<section class="clause" id="sec5">
+<div class="clause-num">Article 05</div>
+<h2>Transfers outside the European Union</h2>
+<p>Your data is stored in France (Supabase eu-west-3 data center, Paris). No transfer outside the EU takes place for the main storage.</p>
+<p>Occasional and limited transfers outside the European Union may nevertheless occur, in particular in connection with Apple and Google (distribution, authentication, payments and notifications), RevenueCat (subscription management) and Anthropic (artificial intelligence features). These transfers are covered by appropriate legal safeguards:</p>
+<ul>
+<li>Apple's and Google's participation in the <strong>EU-U.S. Data Privacy Framework</strong>, recognised by the European Commission's adequacy decision of July 10, 2023</li>
+<li>The European Commission's Standard Contractual Clauses and the data processing agreements entered into with the processors concerned</li>
+</ul>
+<p>You can obtain a copy of the safeguards applicable to any transfer by writing to <a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a>.</p>
+</section>
+<!-- 6. RETENTION -->
+<section class="clause" id="sec6">
+<div class="clause-num">Article 06</div>
+<h2>Retention period</h2>
+<p>Your data is not kept longer than necessary for the purposes described in Article 3.</p>
+<div class="data-table">
+<div class="data-row">
+<div class="data-label">Active account</div>
+<div class="data-content">
+Your data is kept as long as your account is active, that is, as long as you use the Application and your subscription is running.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Inactive account</div>
+<div class="data-content">
+After prolonged inactivity (no sign-in for <strong>3 consecutive years</strong>), your account and all your personal data are automatically deleted, in line with the CNIL's recommendation.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Deletion on request</div>
+<div class="data-content">
+You can request the permanent deletion of your account at any time. Deletion takes place within <strong>30 days</strong> at the latest from receipt of your request.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Accounting data</div>
+<div class="data-content">
+Accounting records and invoices relating to subscriptions are kept for <strong>10 years</strong> from the end of the financial year, in accordance with the French Commercial Code.
+</div>
+</div>
+<div class="data-row">
+<div class="data-label">Technical logs</div>
+<div class="data-content">
+Connection and technical logs are kept for a maximum of <strong>12 months</strong> for security and fraud prevention purposes, then deleted.
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECURITY -->
+<section class="clause" id="sec7">
+<div class="clause-num">Article 07</div>
+<h2>Data security</h2>
+<p>ASCEND implements appropriate technical and organisational measures to ensure the confidentiality, integrity and availability of your data.</p>
+<ul>
+<li><strong>Encrypted communications</strong>: all communications between the Application and our servers are encrypted with TLS (HTTPS)</li>
+<li><strong>Encryption at rest</strong>: databases and file storage are encrypted on Supabase's servers</li>
+<li><strong>Strict isolation</strong>: each user can only access their own data, thanks to <em>Row-Level Security</em> (RLS) enforced on the server</li>
+<li><strong>Passwords</strong>: your password is never stored in plain text. It is hashed with a standard cryptographic algorithm (bcrypt) and cannot be recovered, not even by the publisher</li>
+<li><strong>Private photos</strong>: your progress photos are stored in private storage, only accessible through temporary signed URLs linked to your account</li>
+<li><strong>Stronger authentication</strong>: you can sign in with Apple or Google, delegating security to these recognised providers</li>
+</ul>
+<p>Despite these measures, no system can guarantee absolute security. If an incident is likely to affect your data, you will be informed as soon as possible in accordance with Article 34 GDPR, and the incident will be notified to the CNIL under the conditions of Article 33 GDPR.</p>
+</section>
+<!-- 8. COOKIES -->
+<section class="clause" id="sec8">
+<div class="clause-num">Article 08</div>
+<h2>Cookies and trackers</h2>
+<p>ASCEND is a native mobile application. <strong>It uses no browser cookies</strong>, no advertising pixels, no advertising identifiers (IDFA, GAID) and no third-party behavioural tracking tools for advertising purposes.</p>
+<p>The Application only stores on your device the minimal technical data needed for it to work (sign-in session, display preferences, local cache). This data stays on your device and is never used for commercial purposes.</p>
+</section>
+<!-- 9. MINORS -->
+<section class="clause" id="sec9">
+<div class="clause-num">Article 09</div>
+<h2>Minors</h2>
+<p>The Application is strictly reserved for people aged <strong>16 or over</strong>.</p>
+<p>ASCEND does not knowingly collect personal data from anyone under 16. If you are a parent or legal guardian and believe that a minor under 16 has created an account without your permission, contact us at <a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a>. The account will be suspended immediately and the associated data deleted.</p>
+<p>For users aged 16 to 18, use of the Application requires the prior consent of a parent or legal guardian.</p>
+</section>
+<!-- 10. PROFILING -->
+<section class="clause" id="sec10">
+<div class="clause-num">Article 10</div>
+<h2>Profiling and automated decisions</h2>
+<p>ASCEND carries out <strong>no profiling for advertising or commercial purposes</strong>. Your data is never used to show you targeted advertising, nor shared with advertising networks or behavioural data brokers.</p>
+<p>The Application automatically calculates your calorie needs, your macronutrients and your training program from the information you have provided. These calculations are strictly deterministic and based on published scientific formulas (Mifflin-St Jeor method for basal metabolic rate). They produce no legal effects concerning you and are not an "automated decision" within the meaning of Article 22 GDPR.</p>
+<p>The artificial intelligence features generate answers from the information you choose to send. These answers may be inaccurate or incomplete and should be checked before you act on them. They are not a diagnosis, a prescription or medical advice, and produce no legal effect or binding decision concerning you.</p>
+<p>You can always change your calorie and macronutrient targets manually in the Application, or ask for human assistance through the messaging features, depending on your subscription plan.</p>
+</section>
+<!-- 11. RIGHTS -->
+<section class="clause" id="sec11">
+<div class="clause-num">Article 11</div>
+<h2>Your rights</h2>
+<p>In accordance with Articles 15 to 22 GDPR and the French "Informatique et Libertés" law, you have the following rights over your personal data at any time:</p>
+<h3>Right of access (Art. 15 GDPR)</h3>
+<p>You can ask for confirmation that your data is being processed and obtain a copy of all the data concerning you.</p>
+<h3>Right to rectification (Art. 16 GDPR)</h3>
+<p>You can ask for any inaccurate or incomplete data to be corrected. Most corrections can be made directly from your profile in the Application.</p>
+<h3>Right to erasure, or "right to be forgotten" (Art. 17 GDPR)</h3>
+<p>You can request the permanent deletion of your data. Deletion takes place within 30 days at the latest, subject to legal retention obligations (in particular accounting obligations).</p>
+<p>Deletion can be started in the Application from <strong>Profile → Settings → Delete my account</strong>, or requested without reinstalling the Application from the page <a href="./delete-account.html">Delete your ASCEND account</a>.</p>
+<h3>Right to restriction of processing (Art. 18 GDPR)</h3>
+<p>You can ask for the processing of some of your data to be temporarily suspended, for example while a request for rectification is being checked.</p>
+<h3>Right to data portability (Art. 20 GDPR)</h3>
+<p>You can ask to receive your data in a structured, commonly used and machine-readable format (JSON), in order to transfer it to another service.</p>
+<h3>Right to object (Art. 21 GDPR)</h3>
+<p>You can object, on grounds relating to your particular situation, to processing based on legitimate interest.</p>
+<h3>Right to withdraw your consent (Art. 7 GDPR)</h3>
+<p>For processing based on your consent (optional notifications, health syncing, etc.), you can withdraw your consent at any time from the Application settings, without affecting the lawfulness of processing carried out before.</p>
+<h3>Post-mortem instructions (Art. 85 of the French "Informatique et Libertés" law)</h3>
+<p>You can set instructions about what happens to your data after your death, either general (with a certified trusted digital third party) or specific to the Application (by writing to us directly).</p>
+<h3>Residents of other countries</h3>
+<p>If you live outside the European Union (for example in the United States, the United Kingdom, Canada or Australia), you benefit from the same rights described above, in addition to any rights granted by the law of your country. ASCEND does not sell or share your personal data for cross-context behavioural advertising.</p>
+<h3>How to exercise your rights</h3>
+<p>To exercise any of these rights, write to us at <a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a>, stating clearly which right you wish to exercise. We may need to verify your identity if there is any doubt about who is making the request. We answer every request within <strong>one month</strong> at most, which may be extended by two further months for particularly complex requests (with prior notice).</p>
+<p>Exercising these rights is free of charge, unless a request is manifestly unfounded or excessive.</p>
+</section>
+<!-- 12. CHANGES -->
+<section class="clause" id="sec12">
+<div class="clause-num">Article 12</div>
+<h2>Changes to this policy</h2>
+<p>This policy may change to reflect legal, technical or organisational developments (adding a processor, changing retention periods, etc.).</p>
+<p>Any substantial change will be notified in advance by email or by notification in the Application, at least <strong>15 days</strong> before it takes effect. The version of the policy in force is always available from the Application and shows its update date at the top.</p>
+<p>The version history is available on request at the contact address.</p>
+</section>
+<!-- 13. CONTACT -->
+<section class="clause" id="sec13">
+<div class="clause-num">Article 13</div>
+<h2>Contact and complaints</h2>
+<h3>Write to us</h3>
+<p>For any question about this policy or to exercise your rights:</p>
+<div class="info-card">
+<div class="info-grid">
+<div class="info-row">
+<div class="k">Email</div>
+<div class="v"><a href="mailto:ascend.webapp@gmail.com">ascend.webapp@gmail.com</a></div>
+</div>
+<div class="info-row">
+<div class="k">Mail</div>
+<div class="v">Steve Camboly<br/>272 route de la Petite Joux<br/>74520 Valleiry, France</div>
+</div>
+</div>
+</div>
+<h3>Complain to a supervisory authority</h3>
+<p>Independently of any action with the controller, you have the right to lodge a complaint with the French data protection authority, the Commission Nationale de l'Informatique et des Libertés (CNIL), which is the competent supervisory authority, or with the data protection authority of your country of residence:</p>
+<div class="info-card">
+<div class="info-grid">
+<div class="info-row">
+<div class="k">Address</div>
+<div class="v">Commission Nationale<br/>de l'Informatique et des Libertés<br/>3 place de Fontenoy — TSA 80715<br/>75334 Paris Cedex 07, France</div>
+</div>
+<div class="info-row">
+<div class="k">Website</div>
+<div class="v"><a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="signature">ASCEND<span class="dot">.</span></div>
+<div class="sub">BY STEVE CAMBOLY</div>
+<div class="footer-meta">PRIVACY v1.1 (ENGLISH) · GDPR COMPLIANT</div>
+<div class="footer-links">
+<a href="./terms.html">TERMS</a>
+<span style="color: var(--text-faded);">·</span>
+<a href="./privacy.html">PRIVACY</a>
+<span style="color: var(--text-faded);">·</span>
+<a href="./delete-account.html">DELETE YOUR ACCOUNT</a>
+</div>
+</footer>
+</body>
+</html>
